@@ -1,0 +1,67 @@
+<section class="max-w-[1400px] mx-auto px-4 md:px-8 py-16 border-b border-[#4a3129]">
+  <div class="bg-[#e3dbcf] p-6 md:p-12 border border-[#4a3129] space-y-8">
+    <div>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#5d4037]">
+        {{ section.settings.heading | default: "PROVEN QUALITY" }}
+      </h2>
+      <p class="text-sm text-[#4a3129]/80 mt-1 max-w-md">
+        {{ section.settings.subheading | default: "Hear from our community. Real experiences with the craftsmanship and quality of our everyday essentials." }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      <!-- Review Quote -->
+      <div class="lg:col-span-2 space-y-6">
+        <div class="flex gap-1 text-[#4a3129]">
+          ★★★★★
+        </div>
+
+        <p class="font-serif text-2xl md:text-3xl text-[#4a3129] italic leading-snug">
+          "Flawless utility meets minimal design. The matte fabric resists the elements while maintaining a clean, tailored drape. An essential layer for everyday wear."
+        </p>
+
+        <div class="flex items-center gap-3">
+          <div>
+            <h4 class="font-bold text-base text-[#4a3129]">David M.</h4>
+            <p class="text-xs text-[#4a3129]/80">✓ Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviewed Product Preview Card -->
+      <div class="bg-[#f4f1eb] p-4 border border-[#4a3129] flex items-center gap-4">
+        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=400&q=80" alt="Technical Overshirt" class="w-20 h-24 object-cover border border-[#4a3129]/30 shrink-0">
+        <div class="space-y-1 min-w-0">
+          <span class="text-[10px] uppercase font-bold text-[#4a3129]/70">Reviewed Item</span>
+          <p class="font-bold text-sm text-[#4a3129] truncate">Technical Overshirt</p>
+          <p class="text-xs font-bold text-[#4a3129]">$110.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Proven Quality Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "PROVEN QUALITY"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Hear from our community. Real experiences with the craftsmanship and quality of our everyday essentials."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Proven Quality Reviews"
+    }
+  ]
+}
+{% endschema %}

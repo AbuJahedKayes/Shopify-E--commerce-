@@ -1,0 +1,74 @@
+<footer class="mt-auto bg-[#4a3129] text-[#f4f1eb] border-t border-[#4a3129] px-4 md:px-8 py-12 font-sans">
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Column 1: Brand Info -->
+    <div class="space-y-4">
+      <h3 class="font-serif text-2xl text-[#f4f1eb]">
+        {{ section.settings.brand_title | default: shop.name }}
+      </h3>
+      <p class="text-xs text-[#f4f1eb]/80 leading-relaxed">
+        {{ section.settings.brand_tagline | default: "Timeless utility clothing crafted with sustainable materials and precision tailoring." }}
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-[#f4f1eb]/20 pb-2">Navigation</h4>
+      <ul class="space-y-2 text-xs">
+        {% for link in linklists.footer.links %}
+          <li><a href="{{ link.url }}" class="hover:underline text-[#f4f1eb]/80 hover:text-[#f4f1eb]">{{ link.title }}</a></li>
+        {% else %}
+          <li><a href="/collections/all" class="hover:underline text-[#f4f1eb]/80">Shop Catalog</a></li>
+          <li><a href="/pages/about" class="hover:underline text-[#f4f1eb]/80">Sustainability</a></li>
+          <li><a href="/pages/contact" class="hover:underline text-[#f4f1eb]/80">Contact Us</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Column 3: Customer Care -->
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-[#f4f1eb]/20 pb-2">Customer Care</h4>
+      <ul class="space-y-2 text-xs text-[#f4f1eb]/80">
+        <li>Free Shipping Worldwide on Orders over $150</li>
+        <li>30-Day Hassle-Free Returns</li>
+        <li>Lifetime Repair Warranty</li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Newsletter -->
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-[#f4f1eb]/20 pb-2">Stay Connected</h4>
+      <p class="text-xs text-[#f4f1eb]/80 mb-3">Subscribe for limited drops and seasonal releases.</p>
+      {% form 'customer', class: 'flex' %}
+        <input type="email" name="contact[email]" placeholder="Enter your email" class="px-3 py-2 text-xs text-[#4a3129] bg-[#f4f1eb] w-full focus:outline-none" required>
+        <button type="submit" class="px-4 py-2 bg-[#5d4037] text-[#f4f1eb] text-xs font-bold uppercase tracking-wider hover:bg-[#e3dbcf] hover:text-[#4a3129] transition-colors">
+          Join
+        </button>
+      {% endform %}
+    </div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto mt-12 pt-6 border-t border-[#f4f1eb]/20 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#f4f1eb]/60">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All Rights Reserved.</p>
+    <p>Engineered with Sustainable Craftsmanship</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "brand_title",
+      "label": "Brand Title",
+      "default": "AK-27 Clothing Co."
+    },
+    {
+      "type": "textarea",
+      "id": "brand_tagline",
+      "label": "Brand Tagline",
+      "default": "Timeless utility clothing crafted with sustainable materials and precision tailoring."
+    }
+  ]
+}
+{% endschema %}

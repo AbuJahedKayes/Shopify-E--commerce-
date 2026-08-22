@@ -1,0 +1,36 @@
+<div class="group border border-[#4a3129] bg-[#f4f1eb] p-4 flex flex-col justify-between hover:shadow-md transition-shadow">
+  <div class="relative w-full aspect-[3/4] bg-[#e3dbcf] overflow-hidden border border-[#4a3129]/30 mb-4">
+    <a href="{{ product.url }}">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      {% else %}
+        <div class="w-full h-full flex items-center justify-center text-xs text-[#4a3129]/60">No Image</div>
+      {% endif %}
+    </a>
+
+    {% if product.available == false %}
+      <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase tracking-wider px-2 py-1">Sold Out</span>
+    {% elsif product.compare_at_price > product.price %}
+      <span class="absolute top-2 left-2 bg-[#5d4037] text-[#f4f1eb] text-[10px] font-bold uppercase tracking-wider px-2 py-1">Sale</span>
+    {% endif %}
+  </div>
+
+  <div>
+    <h3 class="text-sm font-bold text-[#4a3129] group-hover:underline underline-offset-2">
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    </h3>
+    <p class="text-xs text-[#4a3129]/70 mt-1 font-semibold">
+      {{ product.price | money }}
+      {% if product.compare_at_price > product.price %}
+        <s class="text-[#4a3129]/40 ml-1">{{ product.compare_at_price | money }}</s>
+      {% endif %}
+    </p>
+  </div>
+
+  <form method="post" action="/cart/add" class="mt-4">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit" class="w-full py-2 bg-[#e3dbcf] border border-[#4a3129] text-[#4a3129] text-xs font-bold uppercase tracking-wider hover:bg-[#4a3129] hover:text-[#f4f1eb] transition-colors">
+      Add to Cart
+    </button>
+  </form>
+</div>

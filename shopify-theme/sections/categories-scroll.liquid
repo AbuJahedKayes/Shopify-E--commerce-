@@ -1,0 +1,76 @@
+<section class="max-w-[1400px] mx-auto px-4 md:px-8 py-16 border-b border-[#4a3129]">
+  <div class="mb-8">
+    <h2 class="font-serif text-3xl md:text-4xl text-[#5d4037]">
+      {{ section.settings.heading | default: "SHOP BY CATEGORY" }}
+    </h2>
+    <p class="text-sm text-[#4a3129]/70 mt-1 max-w-md">
+      {{ section.settings.subheading | default: "Explore our curated collections of earth-toned essentials made for daily living." }}
+    </p>
+  </div>
+
+  <!-- Dynamic Category Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <!-- Outerwear Category -->
+    <a href="/collections/outerwear" class="group bg-[#e3dbcf] h-[380px] md:h-[430px] relative border border-[#4a3129] overflow-hidden flex flex-col justify-end shadow-sm">
+      <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80" alt="Outerwear" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      <div class="relative z-10 bg-[#e3dbcf] p-4 border-t border-[#4a3129] flex justify-between items-center">
+        <div>
+          <h3 class="font-serif text-2xl text-[#4a3129] group-hover:underline">Outerwear</h3>
+          <p class="text-[11px] text-[#4a3129]/70 font-normal">Heavyweight Jackets & Overshirts</p>
+        </div>
+        <div class="w-8 h-8 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center font-bold">→</div>
+      </div>
+    </a>
+
+    <!-- Tops Category -->
+    <a href="/collections/tops" class="group bg-[#e3dbcf] h-[380px] md:h-[430px] relative border border-[#4a3129] overflow-hidden flex flex-col justify-end shadow-sm">
+      <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Tops & Shirts" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      <div class="relative z-10 bg-[#e3dbcf] p-4 border-t border-[#4a3129] flex justify-between items-center">
+        <div>
+          <h3 class="font-serif text-2xl text-[#4a3129] group-hover:underline">Tops & Shirts</h3>
+          <p class="text-[11px] text-[#4a3129]/70 font-normal">Box Tees, Shirts & Knitwear</p>
+        </div>
+        <div class="w-8 h-8 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center font-bold">→</div>
+      </div>
+    </a>
+
+    <!-- Trousers Category -->
+    <a href="/collections/trousers" class="group bg-[#e3dbcf] h-[380px] md:h-[430px] relative border border-[#4a3129] overflow-hidden flex flex-col justify-end shadow-sm">
+      <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80" alt="Bottoms & Trousers" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      <div class="relative z-10 bg-[#e3dbcf] p-4 border-t border-[#4a3129] flex justify-between items-center">
+        <div>
+          <h3 class="font-serif text-2xl text-[#4a3129] group-hover:underline">Trousers</h3>
+          <p class="text-[11px] text-[#4a3129]/70 font-normal">Cargo Pants, Denim & Trousers</p>
+        </div>
+        <div class="w-8 h-8 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center font-bold">→</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Categories Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "SHOP BY CATEGORY"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Explore our curated collections of earth-toned essentials made for daily living."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Categories Section"
+    }
+  ]
+}
+{% endschema %}

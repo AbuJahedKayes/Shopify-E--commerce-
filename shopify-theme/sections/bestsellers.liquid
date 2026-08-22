@@ -1,0 +1,84 @@
+<section class="max-w-[1400px] mx-auto px-4 md:px-8 py-16 border-b border-[#4a3129]">
+  <div class="mb-8">
+    <h2 class="font-serif text-3xl md:text-4xl text-[#5d4037]">
+      {{ section.settings.heading | default: "BESTSELLERS" }}
+    </h2>
+    <p class="text-sm text-[#4a3129]/70 mt-1 max-w-md">
+      {{ section.settings.subheading | default: "Shop the crowd favorites. These are the most-loved styles our community adores." }}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <!-- Bestseller 1 -->
+    <div class="border border-[#4a3129] bg-[#f4f1eb] p-4 flex flex-col justify-between hover:shadow-md transition-shadow">
+      <div class="relative w-full aspect-[3/4] bg-[#e3dbcf] overflow-hidden border border-[#4a3129]/30 mb-4">
+        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Technical Overshirt" class="w-full h-full object-cover">
+        <span class="absolute top-2 left-2 bg-[#5d4037] text-[#f4f1eb] text-[10px] font-bold uppercase tracking-wider px-2 py-1">Bestseller</span>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Technical Overshirt</h3>
+        <p class="text-xs text-[#4a3129]/70 mt-1 font-semibold">$110.00</p>
+      </div>
+      <a href="{{ routes.all_products_collection_url }}" class="mt-4 text-center block w-full py-2 bg-[#e3dbcf] border border-[#4a3129] text-[#4a3129] text-xs font-bold uppercase hover:bg-[#4a3129] hover:text-[#f4f1eb] transition-colors">
+        View Product
+      </a>
+    </div>
+
+    <!-- Bestseller 2 -->
+    <div class="border border-[#4a3129] bg-[#f4f1eb] p-4 flex flex-col justify-between hover:shadow-md transition-shadow">
+      <div class="relative w-full aspect-[3/4] bg-[#e3dbcf] overflow-hidden border border-[#4a3129]/30 mb-4">
+        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Relaxed Cargo Pant" class="w-full h-full object-cover">
+        <span class="absolute top-2 left-2 bg-[#5d4037] text-[#f4f1eb] text-[10px] font-bold uppercase tracking-wider px-2 py-1">Bestseller</span>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Relaxed Cargo Pant</h3>
+        <p class="text-xs text-[#4a3129]/70 mt-1 font-semibold">$90.00</p>
+      </div>
+      <a href="{{ routes.all_products_collection_url }}" class="mt-4 text-center block w-full py-2 bg-[#e3dbcf] border border-[#4a3129] text-[#4a3129] text-xs font-bold uppercase hover:bg-[#4a3129] hover:text-[#f4f1eb] transition-colors">
+        View Product
+      </a>
+    </div>
+
+    <!-- Bestseller 3 -->
+    <div class="border border-[#4a3129] bg-[#f4f1eb] p-4 flex flex-col justify-between hover:shadow-md transition-shadow">
+      <div class="relative w-full aspect-[3/4] bg-[#e3dbcf] overflow-hidden border border-[#4a3129]/30 mb-4">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Heavyweight Box Tee" class="w-full h-full object-cover">
+        <span class="absolute top-2 left-2 bg-[#5d4037] text-[#f4f1eb] text-[10px] font-bold uppercase tracking-wider px-2 py-1">Bestseller</span>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Heavyweight Box Tee</h3>
+        <p class="text-xs text-[#4a3129]/70 mt-1 font-semibold">$35.00</p>
+      </div>
+      <a href="{{ routes.all_products_collection_url }}" class="mt-4 text-center block w-full py-2 bg-[#e3dbcf] border border-[#4a3129] text-[#4a3129] text-xs font-bold uppercase hover:bg-[#4a3129] hover:text-[#f4f1eb] transition-colors">
+        View Product
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bestsellers Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "BESTSELLERS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Shop the crowd favorites. These are the most-loved styles our community adores."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bestsellers Section"
+    }
+  ]
+}
+{% endschema %}

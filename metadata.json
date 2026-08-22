@@ -1,0 +1,6 @@
+{
+  "name": "AK-27 Clothing Co.",
+  "description": "Timeless, sustainable luxury. Ethically crafted slow fashion e-commerce theme with responsive minimalist design, product image galleries, search, filtering, and mobile checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

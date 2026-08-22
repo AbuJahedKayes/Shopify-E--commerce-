@@ -1,0 +1,50 @@
+<header class="sticky top-0 z-50 bg-[#f4f1eb]/95 backdrop-blur-md border-b border-[#4a3129] px-4 md:px-8 py-4">
+  <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="{{ routes.root_url }}" class="flex items-center gap-2">
+      <span class="font-serif text-2xl md:text-3xl font-normal tracking-tight text-[#5d4037]">
+        {{ section.settings.brand_name | default: shop.name }}
+      </span>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-[#4a3129]">
+      {% for link in linklists.main-menu.links %}
+        <a href="{{ link.url }}" class="hover:underline underline-offset-4 decoration-[#4a3129]">
+          {{ link.title }}
+        </a>
+      {% else %}
+        <a href="{{ routes.all_products_collection_url }}" class="hover:underline underline-offset-4">Shop All</a>
+        <a href="/collections/new-arrivals" class="hover:underline underline-offset-4">New Arrivals</a>
+        <a href="/pages/about" class="hover:underline underline-offset-4">About</a>
+      {% endfor %}
+    </nav>
+
+    <!-- Actions: Search & Cart -->
+    <div class="flex items-center gap-4">
+      <a href="/search" class="p-2 border border-[#4a3129] bg-[#e3dbcf] hover:bg-[#4a3129] hover:text-[#f4f1eb] transition-colors text-xs font-bold uppercase tracking-wider">
+        Search
+      </a>
+      <a href="{{ routes.cart_url }}" class="flex items-center gap-2 px-4 py-2 bg-[#4a3129] text-[#f4f1eb] text-xs font-bold uppercase tracking-wider hover:bg-[#3b261f] transition-colors">
+        <span>Cart</span>
+        <span class="w-5 h-5 rounded-full bg-[#f4f1eb] text-[#4a3129] flex items-center justify-center text-[10px] font-extrabold">
+          {{ cart.item_count }}
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Brand Name",
+      "default": "AK-27 Clothing Co."
+    }
+  ]
+}
+{% endschema %}

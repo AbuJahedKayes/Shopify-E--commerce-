@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "COMPLIMENTARY GLOBAL EXPRESS SHIPPING ON ORDERS OVER $150 • SLOW FASHION EDITION"
+      }
+    },
+    "hero": {
+      "type": "hero-carousel",
+      "settings": {
+        "badge_text": "Autumn/Winter Collection",
+        "headline": "Timeless Utility. Sustainable Craft.",
+        "subheadline": "Engineered for longevity, crafted with organic heavyweight textiles designed to age gracefully.",
+        "button_label": "Explore All",
+        "button_url": "/collections/all"
+      }
+    },
+    "new_arrivals": {
+      "type": "new-arrivals-scroll",
+      "settings": {
+        "heading": "NEW ARRIVALS",
+        "subheading": "Auto-Scrolling Collection Showcase",
+        "speed": "25s"
+      }
+    },
+    "categories": {
+      "type": "categories-scroll",
+      "settings": {
+        "heading": "SHOP BY CATEGORY",
+        "subheading": "Explore our curated collections of earth-toned essentials made for daily living."
+      }
+    },
+    "ethos": {
+      "type": "ethos-video",
+      "settings": {
+        "badge": "Craftsmanship Video",
+        "title": "Soft as Moss.\nDurable as Stone.",
+        "text": "We engineer heavy-gauge organic cotton and water-resistant outerwear meant to withstand daily life while offering supreme comfort.",
+        "video_url": "https://assets.mixkit.co/videos/preview/mixkit-sewing-machine-working-on-a-garment-41566-large.mp4"
+      }
+    },
+    "bestsellers": {
+      "type": "bestsellers",
+      "settings": {
+        "heading": "BESTSELLERS",
+        "subheading": "Shop the crowd favorites. These are the most-loved styles our community adores."
+      }
+    },
+    "proven_quality": {
+      "type": "proven-quality",
+      "settings": {
+        "heading": "PROVEN QUALITY",
+        "subheading": "Hear from our community. Real experiences with the craftsmanship and quality of our everyday essentials."
+      }
+    },
+    "built_for_journey": {
+      "type": "built-for-journey",
+      "settings": {
+        "badge": "AK-27 Heritage",
+        "heading": "BUILT FOR THE JOURNEY",
+        "subtitle": "Timeless garments designed for those who value quiet luxury and sustainable durability.",
+        "button_text": "Shop All Collection",
+        "video_url": "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-craftsman-working-with-leather-41568-large.mp4"
+      }
+    },
+    "metrics": {
+      "type": "conscious-metrics",
+      "settings": {
+        "heading": "CONSCIOUS CALCULATIONS",
+        "subheading": "Total transparency. Meaningful metrics behind the environmental cost of our goods."
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "hero",
+    "new_arrivals",
+    "categories",
+    "ethos",
+    "bestsellers",
+    "proven_quality",
+    "built_for_journey",
+    "metrics"
+  ]
+}

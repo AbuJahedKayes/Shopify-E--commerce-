@@ -1,0 +1,24 @@
+<div class="bg-[#4a3129] text-[#f4f1eb] text-center text-[10px] md:text-xs font-bold uppercase tracking-widest py-2.5 px-4 border-b border-[#f4f1eb]/20 overflow-hidden">
+  <div class="whitespace-nowrap animate-marquee inline-block">
+    {{ section.settings.text | default: "COMPLIMENTARY GLOBAL EXPRESS SHIPPING ON ORDERS OVER $150 • SLOW FASHION EDITION" }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "COMPLIMENTARY GLOBAL EXPRESS SHIPPING ON ORDERS OVER $150 • SLOW FASHION EDITION"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

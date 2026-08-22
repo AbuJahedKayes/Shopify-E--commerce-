@@ -1,0 +1,125 @@
+<section class="py-12 bg-[#f4f1eb] border-b border-[#4a3129] overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-8 mb-6 flex justify-between items-end">
+    <div>
+      <span class="text-[10px] font-bold uppercase tracking-widest text-[#4a3129]/70 block mb-1">
+        {{ section.settings.subheading | default: "Auto-Scrolling Collection Showcase" }}
+      </span>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#5d4037]">
+        {{ section.settings.heading | default: "NEW ARRIVALS" }}
+      </h2>
+    </div>
+
+    <a href="{{ routes.all_products_collection_url }}" class="text-xs font-bold uppercase tracking-wider text-[#4a3129] hover:underline">
+      View All Catalog →
+    </a>
+  </div>
+
+  <!-- Auto-scrolling horizontal marquee track -->
+  <div class="relative w-full overflow-hidden py-4">
+    <div class="flex gap-6 animate-scroll-track w-max hover:[animation-play-state:paused] cursor-pointer">
+      
+      <!-- Item 1 -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Technical Overshirt" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase px-2 py-0.5">New</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Technical Overshirt</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$110.00</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Relaxed Cargo Pant" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase px-2 py-0.5">New</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Relaxed Cargo Pant</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$90.00</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Heavyweight Box Tee" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase px-2 py-0.5">New</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Heavyweight Box Tee</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$35.00</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Canvas Worker Jacket" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase px-2 py-0.5">New</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Canvas Worker Jacket</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$140.00</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Organic Wool Vest" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-[#4a3129] text-[#f4f1eb] text-[10px] font-bold uppercase px-2 py-0.5">New</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Organic Wool Vest</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$85.00</p>
+      </div>
+
+      <!-- Duplicate items for seamless continuous loop -->
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Technical Overshirt" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Technical Overshirt</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$110.00</p>
+      </div>
+
+      <div class="w-[260px] md:w-[300px] border border-[#4a3129] bg-[#f4f1eb] p-3 flex-shrink-0">
+        <div class="w-full aspect-[3/4] bg-[#e3dbcf] mb-3 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Relaxed Cargo Pant" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-sm font-bold text-[#4a3129]">Relaxed Cargo Pant</h3>
+        <p class="text-xs font-bold text-[#4a3129]/80 mt-0.5">$90.00</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scrollTrack {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-track {
+    animation: scrollTrack 20s linear infinite;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "New Arrivals Auto-Scroll",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "NEW ARRIVALS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Auto-Scrolling Collection Showcase"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Arrivals Auto-Scroll"
+    }
+  ]
+}
+{% endschema %}

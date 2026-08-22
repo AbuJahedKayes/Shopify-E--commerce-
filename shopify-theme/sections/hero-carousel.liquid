@@ -1,0 +1,205 @@
+<section class="relative w-full min-h-[550px] md:h-[82vh] md:max-h-[820px] bg-[#f4f1eb] overflow-hidden flex flex-col md:flex-row border-b border-[#4a3129] shadow-sm">
+  
+  <!-- Left Content Panel -->
+  <div class="z-20 w-full md:w-2/5 p-6 md:p-12 flex flex-col justify-between bg-[#f4f1eb]">
+    <div class="space-y-5">
+      <div class="inline-flex items-center gap-2 bg-[#e3dbcf] border border-[#4a3129] px-3 py-1">
+        <span class="w-2 h-2 rounded-full bg-[#4a3129] animate-pulse"></span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#4a3129]">
+          {{ section.settings.badge_text | default: "Autumn/Winter Collection" }}
+        </span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-[#5d4037] leading-tight">
+        {{ section.settings.headline | default: "Timeless Utility. Sustainable Craft." }}
+      </h1>
+
+      <p class="text-sm md:text-base text-[#4a3129]/90 leading-relaxed font-normal">
+        {{ section.settings.subheadline | default: "Engineered for longevity, crafted with organic heavyweight textiles designed to age gracefully." }}
+      </p>
+
+      <div class="pt-3 flex items-center gap-3">
+        <a href="{{ section.settings.button_url | default: routes.all_products_collection_url }}" class="group inline-flex items-center border border-[#4a3129] bg-[#4a3129] text-[#f4f1eb] hover:bg-[#3b261f] transition-all">
+          <span class="px-6 py-3.5 text-xs font-bold uppercase tracking-wider border-r border-[#f4f1eb]">
+            {{ section.settings.button_label | default: "Explore All" }}
+          </span>
+          <span class="p-3.5">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="mt-8 pt-6 border-t border-[#4a3129]/20 flex items-center justify-between">
+      <span class="text-xs font-bold text-[#4a3129] uppercase tracking-wider" id="hero-slide-counter">
+        Item 01 / 05
+      </span>
+      <div class="flex items-center gap-1.5" id="hero-indicators">
+        <button onclick="setHeroSlide(0)" class="w-6 h-2 bg-[#4a3129] transition-all hero-dot"></button>
+        <button onclick="setHeroSlide(1)" class="w-2 h-2 bg-[#4a3129]/20 transition-all hero-dot"></button>
+        <button onclick="setHeroSlide(2)" class="w-2 h-2 bg-[#4a3129]/20 transition-all hero-dot"></button>
+        <button onclick="setHeroSlide(3)" class="w-2 h-2 bg-[#4a3129]/20 transition-all hero-dot"></button>
+        <button onclick="setHeroSlide(4)" class="w-2 h-2 bg-[#4a3129]/20 transition-all hero-dot"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Showcase Gallery with Auto-Scrolling Images -->
+  <div class="w-full md:w-3/5 relative h-[420px] md:h-full bg-[#e3dbcf]/40 overflow-hidden border-t md:border-t-0 md:border-l border-[#4a3129] flex items-center justify-center p-6">
+    <div class="relative w-full h-full max-w-[420px] flex items-center justify-center" id="hero-slides-container">
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide absolute inset-0 transition-all duration-700 opacity-100 scale-100 z-10 border border-[#4a3129] bg-[#f4f1eb] p-2 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=1000&q=80" alt="Technical Overshirt" class="w-full h-full object-cover">
+        <div class="absolute bottom-4 left-4 right-4 bg-[#f4f1eb]/95 backdrop-blur-md p-3 border border-[#4a3129] shadow-lg flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-xs text-[#4a3129]">Technical Overshirt</h4>
+            <p class="text-xs font-bold text-[#4a3129]">$110.00</p>
+          </div>
+          <a href="{{ routes.all_products_collection_url }}" class="p-2 bg-[#4a3129] text-[#f4f1eb] text-xs">→</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide absolute inset-0 transition-all duration-700 opacity-0 scale-95 z-0 border border-[#4a3129] bg-[#f4f1eb] p-2 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80" alt="Relaxed Cargo Pant" class="w-full h-full object-cover">
+        <div class="absolute bottom-4 left-4 right-4 bg-[#f4f1eb]/95 backdrop-blur-md p-3 border border-[#4a3129] shadow-lg flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-xs text-[#4a3129]">Relaxed Cargo Pant</h4>
+            <p class="text-xs font-bold text-[#4a3129]">$90.00</p>
+          </div>
+          <a href="{{ routes.all_products_collection_url }}" class="p-2 bg-[#4a3129] text-[#f4f1eb] text-xs">→</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide absolute inset-0 transition-all duration-700 opacity-0 scale-95 z-0 border border-[#4a3129] bg-[#f4f1eb] p-2 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80" alt="Heavyweight Box Tee" class="w-full h-full object-cover">
+        <div class="absolute bottom-4 left-4 right-4 bg-[#f4f1eb]/95 backdrop-blur-md p-3 border border-[#4a3129] shadow-lg flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-xs text-[#4a3129]">Heavyweight Box Tee</h4>
+            <p class="text-xs font-bold text-[#4a3129]">$35.00</p>
+          </div>
+          <a href="{{ routes.all_products_collection_url }}" class="p-2 bg-[#4a3129] text-[#f4f1eb] text-xs">→</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="hero-slide absolute inset-0 transition-all duration-700 opacity-0 scale-95 z-0 border border-[#4a3129] bg-[#f4f1eb] p-2 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80" alt="Canvas Worker Jacket" class="w-full h-full object-cover">
+        <div class="absolute bottom-4 left-4 right-4 bg-[#f4f1eb]/95 backdrop-blur-md p-3 border border-[#4a3129] shadow-lg flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-xs text-[#4a3129]">Canvas Worker Jacket</h4>
+            <p class="text-xs font-bold text-[#4a3129]">$140.00</p>
+          </div>
+          <a href="{{ routes.all_products_collection_url }}" class="p-2 bg-[#4a3129] text-[#f4f1eb] text-xs">→</a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="hero-slide absolute inset-0 transition-all duration-700 opacity-0 scale-95 z-0 border border-[#4a3129] bg-[#f4f1eb] p-2 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80" alt="Organic Wool Vest" class="w-full h-full object-cover">
+        <div class="absolute bottom-4 left-4 right-4 bg-[#f4f1eb]/95 backdrop-blur-md p-3 border border-[#4a3129] shadow-lg flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-xs text-[#4a3129]">Organic Wool Vest</h4>
+            <p class="text-xs font-bold text-[#4a3129]">$85.00</p>
+          </div>
+          <a href="{{ routes.all_products_collection_url }}" class="p-2 bg-[#4a3129] text-[#f4f1eb] text-xs">→</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button onclick="prevHeroSlide()" class="absolute left-4 z-20 p-3 bg-[#f4f1eb] border border-[#4a3129] hover:bg-[#4a3129] hover:text-[#f4f1eb] text-xs font-bold">←</button>
+    <button onclick="nextHeroSlide()" class="absolute right-4 z-20 p-3 bg-[#f4f1eb] border border-[#4a3129] hover:bg-[#4a3129] hover:text-[#f4f1eb] text-xs font-bold">→</button>
+  </div>
+</section>
+
+<script>
+  let currentHeroIdx = 0;
+  const totalHeroSlides = 5;
+
+  function setHeroSlide(idx) {
+    currentHeroIdx = idx;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const counter = document.getElementById('hero-slide-counter');
+
+    slides.forEach((slide, i) => {
+      if (i === idx) {
+        slide.style.opacity = '1';
+        slide.style.transform = 'scale(1)';
+        slide.style.zIndex = '10';
+      } else {
+        slide.style.opacity = '0';
+        slide.style.transform = 'scale(0.95)';
+        slide.style.zIndex = '0';
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === idx) {
+        dot.className = 'w-6 h-2 bg-[#4a3129] transition-all hero-dot';
+      } else {
+        dot.className = 'w-2 h-2 bg-[#4a3129]/20 transition-all hero-dot';
+      }
+    });
+
+    if (counter) {
+      counter.innerText = `Item 0${idx + 1} / 0${totalHeroSlides}`;
+    }
+  }
+
+  function nextHeroSlide() {
+    setHeroSlide((currentHeroIdx + 1) % totalHeroSlides);
+  }
+
+  function prevHeroSlide() {
+    setHeroSlide((currentHeroIdx - 1 + totalHeroSlides) % totalHeroSlides);
+  }
+
+  // Auto scroll every 4 seconds
+  setInterval(nextHeroSlide, 4000);
+</script>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Autumn/Winter Collection"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Timeless Utility. Sustainable Craft."
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Engineered for longevity, crafted with organic heavyweight textiles designed to age gracefully."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Explore All"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}

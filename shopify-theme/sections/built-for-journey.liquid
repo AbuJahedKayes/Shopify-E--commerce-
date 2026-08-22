@@ -1,0 +1,78 @@
+<section class="relative w-full h-[450px] md:h-[550px] overflow-hidden border-b border-[#4a3129] flex items-center justify-center text-center">
+  <!-- Background Video -->
+  <div class="absolute inset-0 z-0 bg-black">
+    {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-70">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% else %}
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-70">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-craftsman-working-with-leather-41568-large.mp4" type="video/mp4">
+      </video>
+    {% endif %}
+    <div class="absolute inset-0 bg-[#4a3129]/60 backdrop-blur-[1px]"></div>
+  </div>
+
+  <!-- Content Box -->
+  <div class="relative z-10 max-w-2xl px-6 space-y-6 text-[#f4f1eb]">
+    <span class="inline-block bg-[#f4f1eb] text-[#4a3129] text-[11px] font-bold uppercase tracking-widest px-3 py-1">
+      {{ section.settings.badge | default: "AK-27 Heritage" }}
+    </span>
+
+    <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-[#f4f1eb] tracking-tight">
+      {{ section.settings.heading | default: "BUILT FOR THE JOURNEY" }}
+    </h2>
+
+    <p class="text-sm sm:text-base text-[#f4f1eb]/90 max-w-lg mx-auto leading-relaxed">
+      {{ section.settings.subtitle | default: "Timeless garments designed for those who value quiet luxury and sustainable durability." }}
+    </p>
+
+    <div>
+      <a href="{{ routes.all_products_collection_url }}" class="inline-flex items-center border border-[#f4f1eb] bg-[#f4f1eb] text-[#4a3129] px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-transparent hover:text-[#f4f1eb] transition-colors">
+        {{ section.settings.button_text | default: "Shop All Collection" }} →
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Built for the Journey",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "AK-27 Heritage"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "BUILT FOR THE JOURNEY"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Timeless garments designed for those who value quiet luxury and sustainable durability."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop All Collection"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Built for the Journey"
+    }
+  ]
+}
+{% endschema %}

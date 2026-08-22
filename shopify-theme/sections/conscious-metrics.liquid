@@ -1,0 +1,76 @@
+<section class="max-w-[1400px] mx-auto px-4 md:px-8 py-16">
+  <div class="mb-8">
+    <h2 class="font-serif text-3xl md:text-4xl text-[#5d4037]">
+      {{ section.settings.heading | default: "CONSCIOUS CALCULATIONS" }}
+    </h2>
+    <p class="text-sm text-[#4a3129]/70 mt-1 max-w-md">
+      {{ section.settings.subheading | default: "Total transparency. Meaningful metrics behind the environmental cost of our goods." }}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Metric 1 -->
+    <div class="bg-[#e3dbcf] p-6 border border-[#4a3129] flex flex-col justify-between gap-6 shadow-sm">
+      <div class="w-14 h-14 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center text-lg font-bold text-[#4a3129]">
+        100%
+      </div>
+      <div class="space-y-2">
+        <h3 class="font-serif text-xl text-[#5d4037]">Organic Fibers</h3>
+        <p class="text-xs text-[#4a3129]/90 leading-relaxed">
+          <strong>GOTS Certified</strong> cotton and wool sourced exclusively from ethical regenerative farms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Metric 2 -->
+    <div class="bg-[#e3dbcf] p-6 border border-[#4a3129] flex flex-col justify-between gap-6 shadow-sm">
+      <div class="w-14 h-14 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center text-lg font-bold text-[#4a3129]">
+        0%
+      </div>
+      <div class="space-y-2">
+        <h3 class="font-serif text-xl text-[#5d4037]">Plastic Packaging</h3>
+        <p class="text-xs text-[#4a3129]/90 leading-relaxed">
+          <strong>Fully Biodegradable</strong> mailers and compostable garment bags for every shipment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Metric 3 -->
+    <div class="bg-[#e3dbcf] p-6 border border-[#4a3129] flex flex-col justify-between gap-6 shadow-sm">
+      <div class="w-14 h-14 border border-[#4a3129] bg-[#f4f1eb] flex items-center justify-center text-lg font-bold text-[#4a3129]">
+        10yr
+      </div>
+      <div class="space-y-2">
+        <h3 class="font-serif text-xl text-[#5d4037]">Wear Guarantee</h3>
+        <p class="text-xs text-[#4a3129]/90 leading-relaxed">
+          <strong>Built for Longevity</strong> with reinforced seams and free lifetime repair support.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Conscious Metrics",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "CONSCIOUS CALCULATIONS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Total transparency. Meaningful metrics behind the environmental cost of our goods."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Conscious Metrics"
+    }
+  ]
+}
+{% endschema %}

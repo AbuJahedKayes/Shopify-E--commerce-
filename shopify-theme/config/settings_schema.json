@@ -1,0 +1,27 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "AK-27 Custom Luxury",
+    "theme_author": "AK-27 Design",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com",
+    "theme_support_url": "https://github.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background Color",
+        "default": "#f4f1eb"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Accent",
+        "default": "#4a3129"
+      }
+    ]
+  }
+]

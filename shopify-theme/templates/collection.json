@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "All Collections",
+        "subheading": "Browse Catalog"
+      }
+    }
+  },
+  "order": ["main"]
+}
